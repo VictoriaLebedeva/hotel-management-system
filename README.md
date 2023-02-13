@@ -1,7 +1,9 @@
 # Hotels Management System
 
 ## Problem Description
-There is a small hotel in town that is owned by one family. In the near future they plan to build two more hotels in the country. They want an information system that would simplify staff management, automate room reservations, and help management make decisions.
+Valmont is a hotel chain, which owns 10 hotels in the country. It uses on old decentralized information system. This leads to huge wastes of the businesses resources in terms of costs and efforts. The company’s customer satisfaction index is falling as compared to their competitors.
+
+New system allows to connect all the hotels into one network, which is easier to manage. It will make booking process faster and convinient and reporting will help to improve marketing strategy. 
 
 ## System Description
 **Hotels Management System** is a web-based application, which helps to simplify hotel operations. This system will unite hotels into big network. It covers major aspects of hotel management:
