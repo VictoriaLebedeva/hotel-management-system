@@ -83,6 +83,8 @@ Managers have full access to the system. Managers are responsible for managing h
 
 ## Appendix A: Glossary
 ## Appendix B: Data Flow Diagramms 
+DFD Low Levels
+![system architecture](/diagrams/dfd_level_2.png)
 ## Appendix C: Entity Relationship Diagramms 
 
 
