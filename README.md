@@ -15,6 +15,6 @@ New system allows to connect all the hotels into one network, which is easier to
 
 - hotel online booking;
 - providing hotel rooms information;
-- decision making;
+- decision making.
 
 The system is hence useful for both customers and managers to portable manage the hotel activities.
