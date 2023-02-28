@@ -32,8 +32,8 @@ Guests will be able to check available rooms, make reservations, and pay for the
 The main product functions are:
 * new user registration;
 * check available rooms;
-* create/cancel reselvation;
-* reservation confirmation;
+* create/cancel booking;
+* booking confirmation;
 * email notificaton;
 * payment;
 * set room details;
@@ -77,10 +77,34 @@ The user interface should be compatible with to any type of web-browser such as 
 
 The system will use for communication HTTP/HTTPS and 
 ## 4. System Features
-### 4.1 \<Feature name\> 
+## Booking Management Service
+
+### 4.1 Create Booking
 #### 4.1.1 Description and Priority
 #### 4.1.2 Stimulus/Response Sequences
 #### 4.1.3 Functional Requirements
+
+### 4.2 Cancel Booking
+#### 4.2.1 Description and Priority
+#### 4.2.2 Stimulus/Response Sequences
+#### 4.2.3 Functional Requirements
+
+### 4.3 Find available room
+#### 4.3.1 Description and Priority
+#### 4.3.2 Stimulus/Response Sequences
+#### 4.3.3 Functional Requirements
+
+### 4.4 Update booking details
+#### 4.4.1 Description and Priority
+#### 4.4.2 Stimulus/Response Sequences
+#### 4.4.3 Functional Requirements
+
+## Reporting Service 
+
+### 4.5 Create report
+#### 4.5.1 Description and Priority
+#### 4.5.2 Stimulus/Response Sequences
+#### 4.5.3 Functional Requirements
 
 ## 5. Other Nonfunctional Requirements
 ### 5.1 Perfomance Requirements
