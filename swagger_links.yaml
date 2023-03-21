@@ -1,0 +1,178 @@
+# metadata
+openapi: 3.0.0
+info:
+  title: Hotel Management Services # API name
+  description: A set of services, which are used to manage Hotel Booking Processes. # Optional. Extended information about the API
+  version: 1.0.0
+
+# servers (not yet implemented)
+
+# path
+paths: # defines individual endpoints (paths) in your API
+  /rooms:
+    get:
+      summary: Returns list of available rooms.
+      description: Find available rooms according searching criteria.
+      tags:
+        - Booking Services
+      parameters:
+        - name: start_date
+          description: Check-in date.
+          in: query
+          schema:
+            type: string
+            format: date
+            pattern: "^([0-9]{2})-([0-9]{2})-([0-9]{4})$"
+        - name: end_date
+          description: Check-out date.
+          in: query
+          schema:
+            type: string
+            format: date
+            pattern: "^([0-9]{2})-([0-9]{2})-([0-9]{4})$"
+        - name: guests_number
+          description: Total number of guests.
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/findroom.json"
+              examples:
+                findroomExampleRs:
+                  $ref: "#/components/examples/findroomExampleRs"
+        400: # Bad Request
+          description: Requested data error.
+        500: # Internal Server Error
+          description: The Booking Service is currently not available.
+  /bookings: # endpoint name
+    post:
+      summary: Create Booking # short service description
+      description: This resource used to create booking.
+      tags:
+        - Booking Services
+      requestBody:
+        description: Request used to create booking.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "schemas/createbookingRq.json"
+            examples:
+              createbookingExampleRq:
+                $ref: "#/components/examples/createbookingExampleRq"
+      responses: # required
+        201: # Created.
+          description: The booking was sucessfully created.
+          headers:
+            Location:
+              description: Contains URL for created resourse.
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/createbookingRs.json"
+              examples:
+                createbookingExampleRs:
+                  $ref: "#/components/examples/createbookingExampleRs"
+        404: # Not found
+          description: The requested room is no longer available.
+        409: # Conflict
+          description: The requested room is already booked for the specified dates.
+        500: # Internal Server Error
+          description: The Booking Service is currently not available.
+
+  /bookings/{booking_id}:
+    parameters:
+      - name: booking_id
+        description: The booking unique identifier.
+        in: path
+        required: true
+        schema:
+          type: string
+          pattern: "^[a-zA-Z0-9]{15}"
+    patch: # TBD
+      summary: Cancel booking.
+      description: This resource used to cancel existing booking.
+      tags:
+        - Booking Services
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "schemas/cancelbookingRq.json"
+            examples:
+              cancelbookingExampleRq:
+                $ref: "#/components/examples/cancelbookingExampleRq"
+      responses:
+        200:
+          description: Canceled.
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/createbookingRs.json"
+              examples:
+                cancelbookingExampleRs:
+                  $ref: "#/components/examples/cancelbookingExampleRs"
+        404: 
+          description: The booking with the particular ID wasn't found.
+        409: 
+          description: The booking with the particular was cancelled.
+        500:
+          description: The Booking Service is currently not available.
+    put:
+      summary: Update booking details.
+      description: Update booking details.
+      tags:
+        - Booking Services
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "schemas/createbookingRq.json"
+            examples:
+              updatebookingExamplesRq:
+                $ref: "#/components/examples/updatebookingExampleRq"
+      responses:
+        200:
+          description: The details were successfully updated.
+        404:
+          description: The booking with the particular ID is not found.
+        409:
+          description: The booking with the particular ID has been cancelled.
+        500:
+          description: The Booking Service is currently not available.
+components:
+  examples:
+    findroomExampleRs:
+      summary: A list of three available rooms.
+      value:
+        $ref: "examples/findroomRs.json"
+    updatebookingExampleRq:
+      summary: The request for booking updating booking.
+      value:
+        $ref: "examples/createbookingRq.json"
+    createbookingExampleRq:
+      summary: The request example for creating booking.
+      value:
+        $ref: "examples/createbookingRq.json"
+    createbookingExampleRs:
+      summary: The response example for creating booking.
+      value:
+        $ref: "examples/createbookingRs.json"
+    cancelbookingExampleRq:
+      summary: The request example of booking cancellation.
+      value: 
+        $ref: "examples/cancelbookingRq.json"
+    cancelbookingExampleRs:
+      summary: The response example of booking cancellation.
+      value: 
+        $ref: "examples/cancelbookingRs.json"
+        

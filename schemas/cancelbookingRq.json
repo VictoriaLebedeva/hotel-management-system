@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "cancelbookingRq",
+  "description": "Describes the request for booking cancellation.",
+  "type": "object",
+  "properties": {
+    "update_date": {
+      "description": "The date and time, when status was updated.",
+      "type": "string",
+      "format": "datetime"
+    },
+    "status": {
+      "description": "Booking status.",
+      "type": "string",
+      "enum": [
+        "To Be Confirmed",
+        "Confirmed",
+        "Canceled",
+        "Check-out",
+        "No-Show"
+      ]
+    }
+  }
+}

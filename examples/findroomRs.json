@@ -1,0 +1,30 @@
+{
+  "start_date": "2022-03-01",
+  "end_date": "2022-03-05",
+  "rooms": [
+    {
+      "room_id": "353546456365",
+      "room_number": "101",
+      "room_type": "Standard",
+      "description": "This room features a queen-sized bed, a flat-screen TV, air conditioning, and a private bathroom with a shower and free toiletries.",
+      "price": 100.00,
+      "guests_allowed": 2
+    },
+    {
+      "room_id": "3535464564565",
+      "room_number": "102",
+      "room_type": "Deluxe",
+      "description": "This room features a king-sized bed, a seating area, a flat-screen TV, air conditioning, and a private bathroom with a shower, a bathtub, and free toiletries.",
+      "price": 150.00,
+      "guests_allowed": 2
+    },
+    {
+      "room_id": "3535445365",
+      "room_number": "103",
+      "room_type": "Suite",
+      "description": "This room features a separate living room, a king-sized bed, a flat-screen TV, air conditioning, and a private bathroom with a shower, a bathtub, and free toiletries.",
+      "price": 200.00,
+      "guests_allowed": 4
+    }
+  ]
+}

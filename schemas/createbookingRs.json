@@ -1,0 +1,178 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "createbookingRs",
+  "description": "This schema describes a response structure of the booking creating.",
+  "type": "object",
+  "properties": {
+    "guest": {
+      "type": "object",
+      "properties": {
+        "guest_id": {
+          "description": "The guest's unique identifier.",
+          "$ref": "#/$defs/identifier"
+        },
+        "first_name": {
+          "description": "The guest/'s first name.",
+          "type": "string",
+          "maxLength": 35
+        },
+        "last_name": {
+          "description": "The guest/'s last name.",
+          "type": "string",
+          "maxLength": 35
+        },
+        "contact_number": {
+          "description": "The guest/'s contact number.",
+          "type": "string",
+          "maxLength": 35
+        },
+        "email": {
+          "description": "The guest/'s email adress.",
+          "type": "string",
+          "format": "email"
+        }
+      },
+      "required": [
+        "guest_id",
+        "first_name",
+        "last_name",
+        "contact_number",
+        "email"
+      ]
+    },
+    "checkin_date": {
+      "description": "The check-in date.",
+      "type": "string",
+      "format": "date"
+    },
+    "checkout_date": {
+      "description": "The check-out date.",
+      "type": "string",
+      "format": "date"
+    },
+    "hotel_id": {
+      "description": "The unique idetifier of the hotel.",
+      "$ref": "#/$defs/identifier"
+    },
+    "num_rooms": {
+      "description": "The number of the booked rooms.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "deposit_type": {
+      "description": "Indication on if the customer made a deposit to guarantee the booking.",
+      "type": "string",
+      "enum": [
+        "No Deposit",
+        "Non Refund",
+        "Refundable"
+      ]
+    },
+    "rooms": {
+      "description": "The list of the booked rooms.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "room_type": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "F",
+              "E"
+            ]
+          },
+          "adults": {
+            "description": "Number of adults.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "children": {
+            "description": "Number of children.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "babies": {
+            "description": "Number of babies.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "meal": {
+            "description": "Specifies a meal type.",
+            "type": "string",
+            "enum": [
+              "Undefined",
+              "SC",
+              "BB",
+              "HB",
+              "FB"
+            ]
+          },
+          "additional_requests": {
+            "description": "The guest/'s additional request about the room.",
+            "type": "string",
+            "maxLength": 500
+          },
+          "price": {
+            "description": "A room price, including meal.",
+            "type": "object",
+            "properties": {
+              "amount": {
+                "description": "Number of money units, specified in the currency.",
+                "type": "number",
+                "minimum": 0
+              },
+              "currency": {
+                "description": "Currency code, according the standard ISO 4217.",
+                "type": "string",
+                "pattern": "^([A-Z]{3,3})$"
+              }
+            },
+            "required": [
+              "amount",
+              "currency"
+            ]
+          }
+        }
+      },
+      "required": [
+        "room_type",
+        "adults",
+        "children",
+        "babies",
+        "meal",
+        "price"
+      ]
+    },
+    "status": {
+      "description": "Reservation status.",
+      "type": "string",
+      "enum": [
+        "To Be Confirmed",
+        "Confirmed",
+        "Canceled",
+        "Check-out",
+        "No-Show"
+      ]
+    }
+  },
+  "required": [
+    "guest",
+    "checkin_date",
+    "checkout_date",
+    "hotel_id",
+    "num_rooms",
+    "deposit_type",
+    "rooms",
+    "status"
+  ],
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[0-9]{1,15}$"
+    }
+  }
+}

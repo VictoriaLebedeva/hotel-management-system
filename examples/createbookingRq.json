@@ -1,0 +1,39 @@
+{
+  "guest": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "contact_number": "123-456-7890",
+    "email": "johndoe@example.com"
+  },
+  "checkin_date": "2022-01-01",
+  "checkout_date": "2022-01-02",
+  "hotel_id": "123456789012345",
+  "num_rooms": 2,
+  "deposit_type": "Refundable",
+  "rooms": [
+    {
+      "room_type": "A",
+      "adults": 2,
+      "children": 1,
+      "babies": 0,
+      "meal": "HB",
+      "additional_requests": "Non-smoking room",
+      "price": {
+        "amount": 200.0,
+        "currency": "USD"
+      }
+    },
+    {
+      "room_type": "B",
+      "adults": 1,
+      "children": 0,
+      "babies": 0,
+      "meal": "BB",
+      "additional_requests": "",
+      "price": {
+        "amount": 150.0,
+        "currency": "USD"
+      }
+    }
+  ]
+}

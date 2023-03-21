@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "findroomRs",
+  "description": "Provides the list of available rooms.",
+  "type": "object",
+  "properties": {
+    "start_date": {
+      "description": "The begining of the date period.",
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "description": "The end of the date period.",
+      "type": "string",
+      "format": "date"
+    },
+    "rooms": {
+      "description": "The list of the rooms.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "room_id": {
+            "description": "The room unique identifier.",
+            "type": "string",
+            "pattern": "^[0-9]{1,15}$"
+          },
+          "room_number": {
+            "description": "The room number.",
+            "type": "string"
+          },
+          "room_type": {
+            "description": "The room type.",
+            "type": "string"
+          },
+          "description": {
+            "description": "The room description.",
+            "type": "string"
+          },
+          "price": {
+            "description": "The room price.",
+            "type": "number"
+          },
+          "guests_allowed": {
+            "description": "The number of guest allowed in the room.",
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "room_id",
+          "room_number",
+          "room_type",
+          "description",
+          "price",
+          "guests_allowed"
+        ]
+      }
+    }
+  },
+  "required": [
+    "start_date",
+    "end_date",
+    "rooms"
+  ]
+}
