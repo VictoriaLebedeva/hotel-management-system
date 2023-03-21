@@ -24,21 +24,21 @@ Guests will be able to check available rooms, make reservations, and pay for the
 
 ## 2. Overall Description 
 ### 2.1 Product Perspective
-### 2.2 Product Functions
 
 ![system architecture](/diagrams/system_architecture.png)
+
+### 2.2 Product Functions
 
 The main product functions are:
 * new user registration;
 * check available rooms;
-* create/cancel reselvation;
-* reservation confirmation;
+* create/cancel booking;
+* booking confirmation;
 * email notificaton;
 * payment;
 * set room details;
 * manage booking details;
-* report generation;
-* bonus calculations.
+* report generation.
 
 ### 2.3 User Classes and Characteristics
 
@@ -57,23 +57,61 @@ Managers have full access to the system. Managers are responsible for managing h
 
 ### 2.4 Operating Enviroment
 ### 2.5 Design and Implementation Constraints
+
+1. **Memory**: (дописать)
+2. **Language Requirement**: (дописать)
+3. **Budget Constraint**: (дописать)
+4. **Implementation Constraint**: (дописать)
+5. **Reliability Requirement**: (дописать)
+
 ### 2.6 User Documentation
 ### 2.7 Assumptions and Dependencies
 
 ## 3. External Enterface Requirements
 ### 3.1 User Interfaces
+
+The user interface should be compatible with to any type of web-browser such as Mozilla Firefox, Google Chrome, etc.
 ### 3.2 Hardware Interfaces
 ### 3.3 Software Interfaces
 ### 3.4 Communications Interfaces
 
+The system will use for communication HTTP/HTTPS and 
 ## 4. System Features
-### 4.1 \<Feature name\> 
+## Booking Management Service
+
+### 4.1 Create Booking
 #### 4.1.1 Description and Priority
 #### 4.1.2 Stimulus/Response Sequences
 #### 4.1.3 Functional Requirements
 
+### 4.2 Cancel Booking
+#### 4.2.1 Description and Priority
+#### 4.2.2 Stimulus/Response Sequences
+#### 4.2.3 Functional Requirements
+
+### 4.3 Find available room
+#### 4.3.1 Description and Priority
+#### 4.3.2 Stimulus/Response Sequences
+#### 4.3.3 Functional Requirements
+
+### 4.4 Update booking details
+#### 4.4.1 Description and Priority
+#### 4.4.2 Stimulus/Response Sequences
+#### 4.4.3 Functional Requirements
+
+## Reporting Service 
+
+### 4.5 Create report
+#### 4.5.1 Description and Priority
+#### 4.5.2 Stimulus/Response Sequences
+#### 4.5.3 Functional Requirements
+
 ## 5. Other Nonfunctional Requirements
 ### 5.1 Perfomance Requirements
+**NF-1:** Query results must return withib 4 seconds.
+**NF-2:** Data in DB should be load within 2 seconds.
+**NF-3:** UI must be load within 3 seconds.
+
 ### 5.2 Safety Requirements
 ### 5.3 Security Requirements
 ### 5.4 Software Quality Attributes
