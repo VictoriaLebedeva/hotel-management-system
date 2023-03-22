@@ -22,14 +22,12 @@ paths: # defines individual endpoints (paths) in your API
           schema:
             type: string
             format: date
-            pattern: "^([0-9]{2})-([0-9]{2})-([0-9]{4})$"
         - name: end_date
           description: Check-out date.
           in: query
           schema:
             type: string
             format: date
-            pattern: "^([0-9]{2})-([0-9]{2})-([0-9]{4})$"
         - name: guests_number
           description: Total number of guests.
           in: query
