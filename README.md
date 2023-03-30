@@ -22,19 +22,7 @@ Their main functions on the project are
 
 This project is done with the goal of practicing skills in systems analysis. Its implementation will be presented in two parts: System Design (I), ETL + Reporting (II).
 
-Within the first part System Design the following will be implemented:
-
-- System Analysis  
-  **Deliverable**: Vision & Scope Document, Software Requirements Specification
-- System Modeling  
-  **Deliverable**: UML Diagrams (TBD)
-- API Design  
-  **Deliverable**: Swagger Specification (TBD)
-- Data Modeling:  
-  **Deliverable**: SQL Scripts (TBD)
-
-Within the second part ETL + Reporting the following will be implemented:
-TBD
+Let's imagine that a representative of a hotel chain asked us to develop an information system capable of effectively managing hotel processes. 
 
 I will use the [Hotel Booking](https://www.kaggle.com/datasets/mojtaba142/hotel-booking) dataset and some data for DB will be generated.
 
@@ -47,5 +35,17 @@ Here is the short description of the project folder structure.
 |- .gitignore
 |- README.md                           <---- Project description
 |- swagger.yaml                        <---- OpenAPI specification  
-
 ```
+## Part I: System Design 
+Within this part the following will be implemented:
+
+- System Analysis  
+  **Deliverable**: Vision & Scope Document, Software Requirements Specification
+- System Modeling  
+  **Deliverable**: UML Diagrams (TBD)
+- API Design  
+  **Deliverable**: Swagger Specification (TBD)
+- Data Modeling:  
+  **Deliverable**: SQL Scripts (TBD)
+  
+ ## Part II: ETL + Reporting (TBD)
