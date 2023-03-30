@@ -3,6 +3,8 @@
 1. [Introduction](https://github.com/VictoriaLebedeva/hotel-management-system/blob/main/README.md#introduction)
 2. [Project Description](https://github.com/VictoriaLebedeva/hotel-management-system/blob/main/README.md#project-description)
 3. [Structure](https://github.com/VictoriaLebedeva/hotel-management-system/blob/main/README.md#structure)
+4. [Part I: System Design](https://github.com/VictoriaLebedeva/hotel-management-system/blob/main/README.md#part-i-system-design)
+5. [Part II: ETL + Reporting](https://github.com/VictoriaLebedeva/hotel-management-system/blob/main/README.md#part-ii-etl--reporting-tbd)
 
 ## Introduction
 
