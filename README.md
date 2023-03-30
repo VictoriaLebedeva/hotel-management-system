@@ -35,3 +35,12 @@ TBD
 I will use the [Hotel Booking](https://www.kaggle.com/datasets/mojtaba142/hotel-booking) dataset and some data for DB will be generated.
 
 ## Structure
+```
+|- documenation                        <---- systems specifications (PDF), data dictionary, etc. 
+|- examples                            <---- messages request and response examples
+|- schemas                             <---- JSON request and response schemas                
+|- .gitignore
+|- README.md                           <---- Project description
+|- swagger.yaml                        <---- OpenAPI specification  
+
+```
