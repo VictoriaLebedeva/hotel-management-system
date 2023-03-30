@@ -20,14 +20,14 @@ This project is done with the goal of practicing skills in systems analysis. Its
 
 Within the first part System Design the following will be implemented:
 
-- System Analysis 
-**Deliverable**: Vision & Scope Document, Software Requirements Specification
-- System Modeling
-**Deliverable**: UML Diagrams (TBD)
-- API Design
-**Deliverable**: Swagger Specification (TBD)
-- Data Modeling:
-**Deliverable**: SQL Scripts (TBD)
+- System Analysis  
+  **Deliverable**: Vision & Scope Document, Software Requirements Specification
+- System Modeling  
+  **Deliverable**: UML Diagrams (TBD)
+- API Design  
+  **Deliverable**: Swagger Specification (TBD)
+- Data Modeling:  
+  **Deliverable**: SQL Scripts (TBD)
 
 Within the second part ETL + Reporting the following will be implemented:
 TBD
