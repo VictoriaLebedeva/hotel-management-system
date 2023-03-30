@@ -1,5 +1,9 @@
 # Hotels Management System (System Design Project)
 
+1. [Introduction](https://github.com/VictoriaLebedeva/hotel-management-system/blob/main/README.md#introduction)
+2. [Project Description](https://github.com/VictoriaLebedeva/hotel-management-system/blob/main/README.md#project-description)
+3. [Structure](https://github.com/VictoriaLebedeva/hotel-management-system/blob/main/README.md#structure)
+
 ## Introduction
 
 A **Systems Analyst** is a professional responsible for analyzing, designing, and implementing information systems to meet the needs of an organization. They work closely with IT teams and business users to identify and document system requirements, develop project plans, and manage system development projects.
@@ -35,6 +39,7 @@ TBD
 I will use the [Hotel Booking](https://www.kaggle.com/datasets/mojtaba142/hotel-booking) dataset and some data for DB will be generated.
 
 ## Structure
+Here is the short description of the project folder structure.
 ```
 |- documenation                        <---- systems specifications (PDF), data dictionary, etc. 
 |- examples                            <---- messages request and response examples
