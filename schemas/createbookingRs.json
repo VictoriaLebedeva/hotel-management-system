@@ -9,7 +9,7 @@
       "properties": {
         "guest_id": {
           "description": "The guest's unique identifier.",
-          "$ref": "#/$defs/identifier"
+          "type": "integer"
         },
         "first_name": {
           "description": "The guest/'s first name.",
@@ -52,7 +52,7 @@
     },
     "hotel_id": {
       "description": "The unique idetifier of the hotel.",
-      "$ref": "#/$defs/identifier"
+      "type": "integer"
     },
     "num_rooms": {
       "description": "The number of the booked rooms.",
@@ -168,11 +168,5 @@
     "deposit_type",
     "rooms",
     "status"
-  ],
-  "$defs": {
-    "identifier": {
-      "type": "string",
-      "pattern": "^[0-9]{1,15}$"
-    }
-  }
+  ]
 }

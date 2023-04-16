@@ -7,6 +7,10 @@
     "guest": {
       "type": "object",
       "properties": {
+        "guest_id": {
+          "description": "The guest's unique identifier.",
+          "type": "integer"
+        },
         "first_name": {
           "description": "The guest/'s first name.",
           "type": "string",
